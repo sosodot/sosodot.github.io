@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  /* Sand scale */
+  --color-sand-50: #FEFDFB;
+  --color-sand-100: #FAF7F1;
+  --color-sand-200: #F6F0E6;
+  --color-sand-300: #F2EADC;
+  --color-sand-400: #ECE0CA;
+  --color-sand-500: #E6D5B8;
+  --color-sand-600: #CABBA2;
+  --color-sand-700: #B5A48A;
+  --color-sand-800: #938876;
+  --color-sand-900: #786F60;
+
+  /* Sage scale */
+  --color-sage-50: #F3F6F4;
+  --color-sage-100: #E6EEE8;
+  --color-sage-200: #D4E1D7;
+  --color-sage-300: #C2D4C6;
+  --color-sage-400: #A3BEA9;
+  --color-sage-500: #84A98C;
+  --color-sage-600: #74957B;
+  --color-sage-700: #64806A;
+  --color-sage-800: #546C5A;
+  --color-sage-900: #455849;
+
+  /* Semantic aliases */
+  --color-cream: #FEFDFB;
+  --color-brown-dark: #1E3328;
+  --color-brown-medium: #B5A48A;
+  --color-accent: #84A98C;
+  --color-warm: #E6D5B8;
+  --color-divider: #D4E1D7;
+
+  --font-sans: "Cabin", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Shake animation for password error */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@utility animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Focus-visible ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
